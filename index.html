@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordeon</title>
+</head>
+<body>
+    <div class="questions-list">
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+        <!-- item -->
+        <div class="questions-list-item">
+            <div class="questions-list-item-title">
+                <p>Question title</p>
+                <span></span>
+            </div>
+            <div class="questions-list-item-answer">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Dolor consectetur deserunt ullam amet molestiae.</p>
+                <p>Doloremque molestiae aperiam voluptas reprehenderit tempora aspernatur, amet, alias ipsam labore in odit explicabo, qui quibusdam.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+        // Получаем все элементы questions-list-item
+        const questionItems = document.querySelectorAll('.questions-list-item');
+
+        questionItems.forEach(item => {
+            item.addEventListener('click', () => {
+            const answer = item.querySelector('.questions-list-item-answer');
+
+            // Проверяем, открыт ли ответ
+            const isActive = answer.classList.contains('active');
+
+            // Сначала скрываем все ответы
+            questionItems.forEach(i => {
+                const otherAnswer = i.querySelector('.questions-list-item-answer');
+                otherAnswer.classList.add('hidden');
+                otherAnswer.classList.remove('active');
+            });
+
+            // Если ответ был закрыт, открываем его
+            if (!isActive) {
+                answer.classList.remove('hidden');
+                answer.classList.add('active');
+            }
+            });
+        });
+        })();
+    </script>
+</body>
+</html>
